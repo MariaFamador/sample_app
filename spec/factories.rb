@@ -9,4 +9,9 @@ FactoryGirl.define do
 			admin true
 		end
 	end
+
+	factory :micropost do # Singular form, on conjunction with the model?
+		content "Lorem ipsum"
+		user
+	end
 end
