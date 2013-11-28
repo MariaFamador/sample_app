@@ -9,6 +9,7 @@ class MicropostsController < ApplicationController
 			redirect_to root_url
 		else
 			@feed_items = []
+			@user = current_user
 			render 'static_pages/home'
 		end
 	end
@@ -29,5 +30,3 @@ class MicropostsController < ApplicationController
 			redirect_to root_url if @micropost.nil?
 		end
 end
-
-
